@@ -34,6 +34,14 @@ llm_http_api = "llm_http_api"
 
 [project.optional-dependencies]
 test = [
+  "httpx >=0.25.2",
+  "llm-clip >=0.1",
+  "llm-embed-jina >=0.1.2",
+  "llm-gpt4all >=0.2",
+  "llama-cpp-python >=0.2.23",
+  "llm-llama-cpp >=0.3",
+  "llm-mlc >=0.5",
+  "llm-sentence-transformers >=0.1.2",
   "pytest ~=7.4.0",
   "pytest-cov ~=4.1.0",
   "ruff ~=0.1.0",
@@ -63,4 +71,11 @@ exclude = [
   "dist",
   "node_modules",
   "venv",
+]
+
+[tool.pytest.ini_options]
+filterwarnings = [
+  "ignore:.*Pydantic V1 style `@validator` validators are deprecated.*:DeprecationWarning",
+  "ignore:.*Support for class-based `config` is deprecated.*:DeprecationWarning",
+  "ignore:.*pkg_resources is deprecated as an API.*:DeprecationWarning",
 ]

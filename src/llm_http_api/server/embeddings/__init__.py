@@ -1,6 +1,3 @@
-from llm_http_api.server.fastapi import app
+import importlib
 
-
-@app.post("/v1/embeddings")
-async def create_embedding():
-    return {"message": "TODO#POST embedding"}
+importlib.import_module("llm_http_api.server.embeddings.create_embedding")
