@@ -38,6 +38,7 @@ llm_http_api = "llm_http_api"
 
 [project.optional-dependencies]
 test = [
+  "build >=1.0.3",
   "httpx >=0.25.2",
   "llm-clip >=0.1",
   "llm-embed-jina >=0.1.2",
@@ -49,6 +50,7 @@ test = [
   "pytest ~=7.4.0",
   "pytest-cov ~=4.1.0",
   "ruff ~=0.1.0",
+  "twine >=4.0.2",
 ]
 
 [tool.ruff]
