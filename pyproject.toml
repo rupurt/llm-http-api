@@ -29,6 +29,10 @@ dependencies = [
   "uvicorn >=0.24.0",
 ]
 
+[project.urls]
+Homepage = "https://github.com/rupurt/llm-http-api"
+Issues = "https://github.com/rupurt/llm-http-api/issues"
+
 [project.entry-points.llm]
 llm_http_api = "llm_http_api"
 
