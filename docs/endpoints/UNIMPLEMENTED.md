@@ -32,12 +32,6 @@
 - [ ] `POST /v1/images/edit`
 - [ ] `POST /v1/images/variations`
 
-### Models
-
-- [ ] `GET /v1/models`
-- [ ] `GET /v1/models/{model}`
-- [ ] `DELETE /v1/models/{model}`
-
 ### Moderations
 
 - [ ] `POST /v1/moderations`

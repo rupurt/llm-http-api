@@ -25,13 +25,19 @@ Options:
 {"object":"embedding","embedding":[-0.47561466693878174,-0.4471365511417389,...],"index":0}
 ```
 
-## OpenAI Endpoints
+## Supported OpenAI Endpoints
+
+### Models
+
+- [x] [`GET /v1/models`](./docs/endpoints/MODELS.md)
+- [x] [`GET /v1/models/{model}`](./docs/endpoints/MODELS.md)
+- [ ] [`DELETE /v1/models/{model}`](./docs/endpoints/MODELS.md)
 
 ### Embeddings
 
 - [x] [`POST /v1/embeddings`](./docs/endpoints/EMBEDDINGS.md)
 
-### Unimplemented
+## Unsupported OpenAI Endpoints
 
 A detailed list of unimplemented OpenAI endpoints can be found [here](./docs/endpoints/UNIMPLEMENTED.md)
 

@@ -1,14 +1,18 @@
 # Endpoints/Embeddings
 
-## POST /v1/embeddings
+### Embedding object
 
-### [Embedding object](https://platform.openai.com/docs/api-reference/embeddings/object)
+[OpenAI reference](https://platform.openai.com/docs/api-reference/embeddings/object)
 
 - `index` - integer
 - `embedding` - array
 - `object` - string
 
-### [Request body](https://platform.openai.com/docs/api-reference/embeddings/create)
+## `POST` /v1/embeddings
+
+[OpenAI reference](https://platform.openai.com/docs/api-reference/embeddings)
+
+### Request body
 
 - `input` - string or array - Required
 - `model` - string - Required
@@ -17,7 +21,7 @@
 
 ### Returns
 
-A list of embedding objects.
+A list of [embedding objects](#embedding-object).
 
 ### Example
 
