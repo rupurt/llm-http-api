@@ -1,6 +1,3 @@
-from llm_http_api.server.fastapi import app
+import importlib
 
-
-@app.post("/v1/chat/completions")
-async def create_chat_completion():
-    return {"message": "TODO#POST chat completion"}
+importlib.import_module("llm_http_api.server.chat.create_chat_completion")
