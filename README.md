@@ -37,6 +37,10 @@ Options:
 
 - [x] [`POST /v1/embeddings`](./docs/endpoints/EMBEDDINGS.md)
 
+### Chat
+
+- [ ] [`POST /v1/chat/completions`](./docs/endpoints/CHAT.md)
+
 ## Unsupported OpenAI Endpoints
 
 A detailed list of unimplemented OpenAI endpoints can be found [here](./docs/endpoints/UNIMPLEMENTED.md)

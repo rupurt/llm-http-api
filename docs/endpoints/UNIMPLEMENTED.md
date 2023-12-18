@@ -6,10 +6,6 @@
 - [ ] `POST /v1/audio/transcriptions`
 - [ ] `POST /v1/audio/translations`
 
-### Chat
-
-- [ ] `POST /v1/chat/completions`
-
 ### Fine Tuning
 
 - [ ] `POST /v1/fine_tuning/jobs`
