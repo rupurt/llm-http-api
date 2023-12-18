@@ -2,6 +2,19 @@
 
 HTTP API for [LLM](https://github.com/simonw/llm) with OpenAI compatibility
 
+## Install
+
+```shell
+> pip install llm
+> pip install llm-http-api
+```
+
+## Getting Started
+
+1. Follow the [directions](https://github.com/simonw/llm?tab=readme-ov-file#getting-started) from LLM
+2. Run the plugin `llm http-api`
+3. Visit the OpenAPI documentation [localhost:8080/docs](http://localhost:8080/docs)
+
 ## Usage
 
 ```shell
