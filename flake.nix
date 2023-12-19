@@ -30,14 +30,14 @@
       # nix develop -c $SHELL
       devShells.default = pkgs.mkShellNoCC {
         name = "default dev shell";
-        LD_LIBRARY_PATH =
-          if (pkgs.stdenv.isLinux)
-          then
-            pkgs.lib.makeLibraryPath [
-              pkgs.stdenv.cc.cc.lib
-              # pkgs.linuxPackages."nvidia_x11-545.29.06-6.1.67"
-            ]
-          else [];
+        # LD_LIBRARY_PATH =
+        #   if (pkgs.stdenv.isLinux)
+        #   then
+        #     pkgs.lib.makeLibraryPath [
+        #       pkgs.stdenv.cc.cc.lib
+        #       pkgs.ncurses
+        #     ]
+        #   else [];
         packages = with pkgs;
           [
             modd

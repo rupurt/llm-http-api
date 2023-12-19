@@ -86,3 +86,22 @@ make lint
 ```shell
 make format
 ```
+
+## Publish Package to PyPi
+
+```shell
+make publish/pypi
+```
+
+## Local LLM's
+
+```shell
+make llm.setup/mlc
+make llm.mlc.download/code_llama-34b-python-q4f16
+make llm.mlc.download/code_llama-34b-instruct-q0f16
+make llm.mlc.download/code_llama-13b-q4f16
+make llm.mlc.download/code_llama-7b-q4f16
+make llm.mlc.download/wizard-coder-15b-q4f32
+make llm.mlc.download/open_hermes-2.5-mistral-7b-q4f16
+make llm.mlc.download/mistral-7b-instruct-q4f16
+```
