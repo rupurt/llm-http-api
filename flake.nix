@@ -30,13 +30,23 @@
       # nix develop -c $SHELL
       devShells.default = pkgs.mkShellNoCC {
         name = "default dev shell";
+        LD_LIBRARY_PATH =
+          if (pkgs.stdenv.isLinux)
+          then
+            pkgs.lib.makeLibraryPath [
+              pkgs.stdenv.cc.cc.lib
+              # pkgs.linuxPackages."nvidia_x11-545.29.06-6.1.67"
+            ]
+          else [];
         packages = with pkgs;
           [
             modd
-            python311Packages.python
-            python311Packages.pip
-            python311Packages.virtualenv
-            python311Packages.ipython
+            (python311.withPackages (ps:
+              with ps; [
+                pip
+                virtualenv
+                ipython
+              ]))
             python311Packages.venvShellHook
           ]
           ++ pkgs.lib.optionals (!pkgs.stdenv.isDarwin) [
