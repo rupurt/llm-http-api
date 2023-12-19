@@ -24,10 +24,12 @@ Usage: llm http-api [OPTIONS]
   Run a FastAPI HTTP server with OpenAI compatibility
 
 Options:
-  -h, --host TEXT       [default: 0.0.0.0]
-  -p, --port INTEGER    [default: 8080]
-  -l, --log-level TEXT  [default: info]
-  --help                Show this message and exit.
+  -h, --host TEXT         [default: 0.0.0.0]
+  -p, --port INTEGER      [default: 8080]
+  -l, --log-level TEXT    [default: info]
+  -r, --reload
+  -d, --reload-dirs LIST  [default: src]
+  --help                  Show this message and exit.
 ```
 
 ```shell
@@ -69,6 +71,10 @@ nix develop -c $SHELL
 ```shell
 make deps.install
 make deps.install/test
+```
+
+```shell
+make run/dev
 ```
 
 ```shell

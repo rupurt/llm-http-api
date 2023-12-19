@@ -17,6 +17,9 @@ deps/outdated:
 deps/check:
 	python -m pip check
 
+run/dev:
+	llm http-api --reload
+
 format:
 	python -m ruff format .
 
