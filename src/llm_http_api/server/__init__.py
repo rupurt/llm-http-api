@@ -3,7 +3,6 @@ from pydantic_settings import (
 )
 import uvicorn
 import importlib
-from llm_http_api.server.fastapi import app
 
 importlib.import_module("llm_http_api.server.root")
 importlib.import_module("llm_http_api.server.swagger")
@@ -26,9 +25,16 @@ class ServerSettings(BaseSettings):
     host: str
     port: int
     log_level: str
+    reload: bool
+    reload_dirs: list[str]
 
 
 def run(settings: ServerSettings):
     uvicorn.run(
-        app, host=settings.host, port=settings.port, log_level=settings.log_level
+        "llm_http_api.server.fastapi:app",
+        host=settings.host,
+        port=settings.port,
+        log_level=settings.log_level,
+        reload=settings.reload,
+        reload_dirs=settings.reload_dirs,
     )
